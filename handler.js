@@ -23,22 +23,21 @@ module.exports = {
         global.u = await conn.clockString(_uptime)
         global.ucapan = ucapan()
         global.settings = global.db.data.settings
+        global.petik = '```'
         global.pickRandom = pickRandom
+        global.fake = global.fake
+        global.fkontak = global.fkontak
         global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
         global.img = pickRandom(global.waifu)
         global.fla = pickRandom(global.flaaa)
         global.namabot = conn.user.name
-        global.packname = global.namabot
-        global.author = global.data.owner
-        //global.author = '𝐟𝐚𝐫𝐡𝐚𝐧'
+        global.packname = 'Powered By'
+        global.author = 'Anjim'
+        //global.author = 'The.sad.boy01'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = '⁺◛˖𝐀𝐫𝐢𝐞 𝐓𝐮𝐛𝐞'
+        global.wm = 'Lui Nge Harem️'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = '𝐀𝐫𝐢𝐞 𝐓𝐮𝐛𝐞 𝐘𝐭'
-        global.kontak2 = [
-        ['6285828357727', '𝐀𝐫𝐢𝐞𝐓𝐮𝐛𝐞', '𝙿𝚎𝚗𝚐𝚎𝚖𝚋𝚊𝚗𝚐', 'Gak donasi Gak papa asal bantu subscribe channel Arie Tube', true],
-        ['6285828357727', await this.getName('6285828357727@s.whatsapp.net'), '𝑷𝒂𝒓𝒕𝒏𝒆𝒓 𝐀𝐫𝐢𝐞 𝐓𝐮𝐛𝐞', true], 
-        ]
+        global.colong2 = ''
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 
@@ -58,7 +57,7 @@ module.exports = {
                     if (!isNumber(user.healt)) user.healt = 0
                     if (!isNumber(user.level)) user.level = 1
                     if (!isNumber(user.exp)) user.exp = 0
-                    if (!isNumber(user.limit)) user.limit = 10
+                    if (!isNumber(user.limit)) user.limit = 25
                     if (!isNumber(user.lastseen)) user.lastseen = 0
                     if (!isNumber(user.usebot)) user.usebot = 0
                     if (!isNumber(user.lastclaim)) user.lastclaim = 0
@@ -69,6 +68,7 @@ module.exports = {
                     if (!isNumber(user.lastowner)) user.lastowner = 0
                     if (!isNumber(user.money)) user.money = 0
                     if (!isNumber(user.diamond)) user.diamond = 0
+                    if (!isNumber(user.ramuan)) user.ramuan = 0
                     if (!isNumber(user.iron)) user.iron = 0
                     if (!isNumber(user.batu)) user.batu = 0
                     if (!isNumber(user.kayu)) user.kayu = 0
@@ -78,6 +78,8 @@ module.exports = {
                     if (!isNumber(user.mythic)) user.mythic = 0
                     if (!isNumber(user.legendary)) user.legendary = 0
                     if (!isNumber(user.pet)) user.pet = 0
+                    if (!isNumber(user.psepick)) user.psepick = 0
+                    if (!isNumber(user.psenjata)) user.psenjata = 0                    
                     if (!isNumber(user.potion)) user.potion = 0
                     if (!isNumber(user.sampah)) user.sampah = 0
                     if (!isNumber(user.armor)) user.armor = 0
@@ -100,10 +102,23 @@ module.exports = {
                     if (!('afkReason' in user)) user.afkReason = ''
                     if (!('pasangan' in user)) user.pasangan = ''
                     // RPG
+                    if (!isNumber(user.healthmonster)) user.healthmonster = 0
                     if (!isNumber(user.anakkucing)) user.anakkucing = 0
                     if (!isNumber(user.anakkuda)) user.anakkuda = 0
                     if (!isNumber(user.anakrubah)) user.anakrubah = 0
                     if (!isNumber(user.anakanjing)) user.anakanjing = 0
+                    if (!isNumber(user.serigala)) user.serigala = 0
+                    if (!isNumber(user.anakserigala)) user.anakserigala = 0
+                    if (!isNumber(user.naga)) user.naga = 0
+                    if (!isNumber(user.anaknaga)) user.anaknaga = 0
+                    if (!isNumber(user.phonix)) user.phonix = 0
+                    if (!isNumber(user.anakphonix)) user.anakphonix = 0
+                    if (!isNumber(user.griffin)) user.griffin = 0
+                    if (!isNumber(user.anakgriffin)) user.anakgriffin = 0
+                    if (!isNumber(user.kyubi)) user.kyubi = 0
+                    if (!isNumber(user.anakkyubi)) user.anakkyubi = 0
+                    if (!isNumber(user.centaur)) user.centaur = 0
+                    if (!isNumber(user.anakcentaur)) user.anakcentaur = 0
                     if (!isNumber(user.makananpet)) user.makananpet = 0
                     if (!isNumber(user.antispam)) user.antispam = 0
                     if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
@@ -113,14 +128,43 @@ module.exports = {
                     if (!isNumber(user.pickaxedurability)) user.pickaxedurability = 0
                     if (!isNumber(user.fishingrod)) user.fishingrod = 0
                     if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0
+                    if (!isNumber(user.apel)) user.apel = 0
+                    if (!isNumber(user.ayamb)) user.ayamb = 0
+                    if (!isNumber(user.ayamg)) user.ayamg = 0
+                    if (!isNumber(user.sapir)) user.sapir = 0
+                    if (!isNumber(user.ssapi)) user.ssapi = 0
+                    if (!isNumber(user.esteh)) user.esteh = 0
+                    if (!isNumber(user.leleg)) user.leleg = 0
+                    if (!isNumber(user.leleb)) user.leleb = 0
                     if (!isNumber(user.lastadventure)) user.lastadventure = 0
+                    if (!isNumber(user.lastkill)) user.lastkill = 0
                     if (!isNumber(user.lastfishing)) user.lastfishing = 0
                     if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
+                    if (!isNumber(user.lastwar)) user.lastwar = 0
+                    if (!isNumber(user.lastsda)) user.lastsda = 0
+                    if (!isNumber(user.lastberbru)) user.lastberbru = 0
                     if (!isNumber(user.lastduel)) user.lastduel = 0
+                    if (!isNumber(user.lastjb)) user.lastjb = 0
+                    if (!isNumber(user.lastSetStatus)) user.lastSetStatus = 0
                     if (!isNumber(user.lastmining)) user.lastmining = 0
                     if (!isNumber(user.lasthunt)) user.lasthunt = 0
+                    if (!isNumber(user.lastngocok)) user.lastngocok = 0
+                    if (!isNumber(user.lastgift)) user.lastgift = 0
+                    if (!isNumber(user.lastrob)) user.lastrob = 0
+                    if (!isNumber(user.lastngojek)) user.lastngojek = 0
+                    if (!isNumber(user.lastgrab)) user.lastgrab = 0
+                    if (!isNumber(user.lastmerampok)) user.lastmerampok = 0                    
+                    if (!isNumber(user.lastberkebon)) user.lastberkebon = 0
+                    if (!isNumber(user.lastcodereg)) user.lastcodereg = 0
+                    if (!isNumber(user.lastdagang)) user.lastdagang = 0
+                    if (!isNumber(user.lasthourly)) user.lasthourly = 0
                     if (!isNumber(user.lastweekly)) user.lastweekly = 0
-                    if (!isNumber(user.lastmonthly)) user.lastmontly = 0  
+                    if (!isNumber(user.lastmonthly)) user.lastmonthly = 0
+                    if (!isNumber(user.lastIstigfar)) user.lastIstigfar = 0
+                    if (!isNumber(user.lastturu)) user.lastturu = 0
+                    if (!isNumber(user.lastseen)) user.lastseen = 0
+                    if (!isNumber(user.lastbansos)) user.lastbansos = 0
+                    if (!isNumber(user.lastrampok)) user.lastrampok = 0
                     if (!('registered' in user)) user.registered = false
                     if (!user.registered) {
                     if (!('name' in user)) user.name = this.getName(m.sender)
@@ -129,6 +173,29 @@ module.exports = {
                     if (!isNumber(user.age)) user.age = -1
                     if (!isNumber(user.regTime)) user.regTime = -1
                     }
+                    if (!isNumber(user.apel)) user.apel = 0
+                    if (!isNumber(user.anggur)) user.anggur = 0
+                    if (!isNumber(user.jeruk)) user.jeruk = 0
+                    if (!isNumber(user.semangka)) user.semangka = 0
+                    if (!isNumber(user.mangga)) user.mangga = 0
+                    if (!isNumber(user.stroberi)) user.stroberi = 0
+                    if (!isNumber(user.pisang)) user.pisang = 0
+                    if (!isNumber(user.kayu)) user.kayu = 0
+                    if (!isNumber(user.botol)) user.botol = 0
+                    if (!isNumber(user.kardus)) user.kardus = 0
+                    if (!isNumber(user.kaleng)) user.kaleng = 0
+                    if (!isNumber(user.aqua)) user.aqua = 0
+                    if (!isNumber(user.diamond)) user.diamond = 0
+                    if (!isNumber(user.iron)) user.iron = 0
+                    if (!isNumber(user.emas)) user.emas = 0
+                    if (!isNumber(user.arlok)) user.arlok = 0
+                    if (!isNumber(user.makanan)) user.makanan = 0
+                    if (!isNumber(user.bibitanggur)) user.bibitanggur = 0
+                    if (!isNumber(user.bibitpisang)) user.bibitpisang = 0
+                    if (!isNumber(user.bibitapel)) user.bibitapel = 0
+                    if (!isNumber(user.bibitmangga)) user.bibitmangga = 0
+                    if (!isNumber(user.bibitjeruk)) user.bibitjeruk = 0
+                    
                     if (!('premium' in user)) user.premium = false
                     if (!isNumber(user.premiumTime)) user.premiumTime = 0
                     if (!user.role) user.role = ''
@@ -165,7 +232,7 @@ module.exports = {
                     healt: 100,
                     level: 1,
                     exp: 0,
-                    limit: 10,
+                    limit: 25,
                     lastseen: 0,
                     usebot: 0,
                     lastclaim: 0,
@@ -193,6 +260,20 @@ module.exports = {
                     rubahlastclaim: 0,
                     anjing: 0,
                     anjinglastclaim: 0,
+                    naga: 0,
+                    nagalastclaim: 0,
+                    griffin: 0,
+                    griffinlastclaim: 0,
+                    centaur: 0,
+                    centaurlastclaim: 0,
+                    serigala: 0,
+                    serigalalastclaim: 0,
+                    phonix: 0,
+                    phonixlastclaim: 0,
+                    makanannaga: 0,
+                    makananphonix: 0,
+                    makanancentaur: 0,
+                    makananserigala: 0,
                     area: 0,
                     banned: false,
                     warn: 0,
@@ -219,18 +300,35 @@ module.exports = {
                     fishingrod: 0,
                     fishingroddurability: 0,
                     lastadventure: 0,
-                    lastfishing: 0,
                     lastdungeon: 0,
                     lastduel: 0,
                     lastmining: 0,
+                    lasthourly: 0,
                     lasthunt: 0,
                     lastweekly: 0,
                     lastmonthly: 0,
+                    lastjb: 0,
+                    lastrob: 0,
+                    lastdaang: 0,
+                    lastngojek: 0,
+                    lastgrab: 0,
+                    lastmerampok: 0,                    
+                    lastngocok: 0,
+                    lastturu: 0,
+                    lastseen: 0,
+                    lastSetStatus: 0,
                     registered: false,
+                    apel: 20,
+                    mangga: 20,
+                    stroberi: 20,
+                    semangka: 20,
+                    jeruk: 20,
+                    semangka: 20,                    
                     name: this.getName(m.sender),
                     email: '',
                     label: '',
                     age: -1,
+                    regTime: -1,
                     regTime: -1,
                     premium: false,
                     premiumTime: 0,
@@ -238,19 +336,42 @@ module.exports = {
                     autolevelup: false,
                     pc: 0,
                     // Mancing cuk
-                    as: 0,
-                    paus: 0,
-                    kepiting: 0,
-                    gurita: 0,
-                    cumi: 0,
-                    buntal: 0,
-                    dory: 0,
-                    lumba: 0,
-                    lobster: 0,
-                    hiu: 0,
-                    udang: 0,
-                    ikan: 0,
-                    orca: 0,
+             as: 0,
+            paus: 0,
+            kepiting: 0,
+            gurita: 0,
+            cumi: 0,
+            buntal: 0,
+            dory: 0,
+            lumba: 0,
+            lobster: 0,
+            hiu: 0,
+            lele: 0,
+            nila: 0,
+            bawal: 0,
+            udang: 0,
+            ikan: 0,
+            orca: 0,
+            banteng: 0,
+            harimau: 0,
+            gajah: 0,
+            kambing: 0,
+            panda: 0,
+            buaya: 0,
+            kerbau : 0,
+            sapi: 0,
+            monyet : 0,
+            babihutan: 0,
+            babi: 0,
+            ayam: 0,
+            apel: 20,
+            ayamb: 0,
+            ayamg: 0,
+            ssapi: 0,
+            sapir: 0,
+            leleb: 0,
+            leleg: 0,
+            esteh: 0,
                     // Kerja Woy
                     atm: 0,
                     job: 'Pengangguran',
@@ -455,8 +576,8 @@ module.exports = {
                     if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
                         let chat = global.db.data.chats[m.chat]
                         let user = global.db.data.users[m.sender]
-                        if (!['unbanchat.js', 'dompet.js', 'creator.js'].includes(name) && chat && chat?.isBanned && !isPrems) return // Kecuali ini, bisa digunakan
-                        if (!['unbanchat.js', 'dompet.js', 'creator.js'].includes(name) && user && user?.banned) return
+                        if (name != 'o-unbanchat.js' && chat && chat?.isBanned) return // Except this
+                        if (name != 'o-unbanuser.js' && user && user?.banned) return
                     }
                     if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { // Both Owner
                         fail('owner', m, this)
@@ -630,7 +751,7 @@ module.exports = {
 
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
-                                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user))
+                                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split`@`[0])
                             let wel = API('hardianto', '/api/welcome3', {
                                 profile: pp,
                                 name: await this.getName(user),
@@ -645,7 +766,17 @@ module.exports = {
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
-                            await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')
+                            await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fkontak,{
+  contextInfo: { externalAdReply :{
+    mediaUrl: linkig,
+    mediaType: 2,
+    description: deslink , 
+    title: titlink,
+    body: wm,
+    thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
+    sourceUrl: linkgc
+     }}
+  })
                         }
                     }
                 }
@@ -686,6 +817,7 @@ module.exports = {
             //console.log('=============\n\ngroupsUpdate \n\n============\n\n' + await groupUpdate)
             if (!text) continue
             await this.sendButton(id, text, wm, 'Matikan Fitur', `.off detect`, global.ftroli, { contextInfo: { mentionedJid: this.parseMention(text) }, mentions: await this.parseMention(text) })
+            //await this.sendMessage(id, { text, mentions: this.parseMention(text) })
         }
     },
     async delete({ remoteJid, fromMe, id, participant }) {
@@ -708,21 +840,29 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = async (type, m, conn) => {
+    let im = global.img
+    let wmo = global.wm
+    let ig = global.linkig
+    let titl = global.titlink
+    let desl = deslink
+    let gc = global.linkgc
     let msg = {
-        rowner: `Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_`,
-        owner: `Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_`,
-        mods: `Perintah ini hanya dapat digunakan oleh *Moderator*`,
+        rowner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
+        owner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
+        mods: 'Perintah ini hanya dapat digunakan oleh *Moderator*',
         premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-        group: `Perintah ini hanya dapat digunakan di grup!`,
+        group: 'Perintah ini hanya dapat digunakan di grup!',
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
         admin: 'Perintah ini hanya untuk *Admin* grup!',
         botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Bot.60*',
-        nsfw: `NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini!`,
-        rpg: `RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini!`,
+        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
+        nsfw: 'NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini!',
+        rpg: 'RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini!',
         restrict: 'Fitur ini di *disable*!'
+    /*}[type]
+    if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })
+    if (msg) return conn.sendButtonDoc(m.chat, msg, wmo, `😅👆`, `o`, fliveLoc2)
 }
 
 let fs = require('fs')
@@ -738,18 +878,18 @@ fs.watchFile(file, () => {
 
 function ucapan() {
     const time = moment.tz('Asia/Jakarta').format('HH')
-    let res = "Selamat malam"
+    let res = "Selamat malam 🌙"
     if (time >= 4) {
-        res = "Selamat pagi"
+        res = "Selamat pagi 🌄"
     }
     if (time > 10) {
-        res = "Selamat siang"
+        res = "Selamat siang ☀️"
     }
     if (time >= 15) {
-        res = "Selamat sore"
+        res = "Selamat sore 🌅"
     }
     if (time >= 18) {
-        res = "Selamat malam"
+        res = "Selamat malam 🌙"
     }
     return res
 }
@@ -764,7 +904,7 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 
-global.thumb = 'https://telegra.ph/file/df447196025b29017e1fa.jpg'
+global.thumb = 'https://telegra.ph/file/61f2d6d9694b49a2ce7aa.jpg'
 
 global.flaaa = [
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
@@ -775,204 +915,36 @@ global.flaaa = [
 ]
 
 global.waifu = [
-'https://i.pinimg.com/originals/ed/34/f8/ed34f88af161e6278993e1598c29a621.jpg',
-'https://i.pinimg.com/originals/85/4d/bb/854dbbd30304cd69f305352f0183fad0.jpg',
-'https://i.pinimg.com/originals/32/2c/a4/322ca456fa2cdec4b717895a65adfa8d.jpg',
-'https://i.pinimg.com/originals/f2/dd/cc/f2ddccd5a1b89d2302cf75c6520c58dd.png',
-'https://i.pinimg.com/originals/aa/6b/df/aa6bdf98cbc9e1fc741c36682fa3e838.jpg',
-'https://i.pinimg.com/originals/88/46/88/884688def830c43648f88154836a8b05.jpg',
-'https://i.pinimg.com/originals/57/d9/20/57d920d58533915850b431bd0b8e1f1d.jpg',
-'https://i.pinimg.com/originals/46/ad/05/46ad0505d33a2c2359f84ed9b867a58c.jpg',
-'https://i.pinimg.com/originals/23/b7/fb/23b7fb922770e139a2a57b1a443a2180.jpg',
-'https://i.pinimg.com/originals/46/79/25/467925d52634fd098ab6890a23c33f30.jpg',
-'https://i.pinimg.com/originals/a4/a1/74/a4a1740e565f4205eb3f700e1936e064.jpg',
-'https://i.pinimg.com/originals/f9/8d/2c/f98d2c3f64e50ba6c8efd9fdc7cf0093.png',
-'https://i.pinimg.com/originals/29/a4/b4/29a4b4573f993d7d6abb45843f529892.jpg',
-'https://i.pinimg.com/originals/40/de/84/40de84ce2ee376d8fae8ff5863d6edb0.jpg',
-'https://i.pinimg.com/originals/b6/f5/b7/b6f5b7d59fd4f332b3820db38612a5a0.jpg',
-'https://i.pinimg.com/originals/94/38/6d/94386d3c23f509dbc30341fed0363a07.jpg',
-'https://i.pinimg.com/originals/b5/94/ef/b594ef0774d29f5a05cd182994aa354e.jpg',
-'https://i.pinimg.com/originals/0f/ed/3f/0fed3f4c456158c506d88f5867ca93d2.jpg',
-'https://i.pinimg.com/originals/1b/7a/a8/1b7aa80191b83b888e9ea6042f090763.jpg',
-'https://i.pinimg.com/originals/72/7a/08/727a08cdf67b62c2ba49e7308c09a1cd.jpg',
-'https://i.pinimg.com/originals/86/93/75/8693757390b9d5b83fb8e40ff9ea876f.jpg',
-'https://i.pinimg.com/originals/5f/79/71/5f79713647b3e99a787ee7483715c1eb.jpg',
-'https://i.pinimg.com/originals/b8/b3/f3/b8b3f397fead38a988174df75d481202.png',
-'https://i.pinimg.com/originals/7a/e0/55/7ae055891f8200cd62ec76a40d47118d.jpg',
-'https://i.pinimg.com/originals/bc/9b/81/bc9b81c63b4844fd1a434d462bdfbd80.png',
-'https://i.pinimg.com/originals/22/8b/ca/228bca60a07d72cac953a9c3be542bab.jpg',
-'https://i.pinimg.com/originals/41/10/c6/4110c64fc91a1c85de02166f67aff7ad.jpg',
-'https://i.pinimg.com/originals/45/11/41/451141522a9086f56efc0da3fdac1957.jpg',
-'https://i.pinimg.com/originals/c1/4e/c7/c14ec7dffbc682f78c52ad8a295b8831.jpg',
-'https://i.pinimg.com/originals/25/5d/d9/255dd9dde5f44673092a4f15e917759f.jpg',
-'https://i.pinimg.com/originals/1f/95/15/1f95156c3d8e2b339a22b3bad2f69a8a.png',
-'https://i.pinimg.com/originals/bb/1a/12/bb1a1249dbc73736ab534fdd52bdc74c.jpg',
-'https://i.pinimg.com/originals/d5/58/a7/d558a745f2452d851d480025ab341537.jpg',
-'https://i.pinimg.com/originals/e7/00/0e/e7000e7e72c1b37ea7a4c780182d05d8.jpg',
-'https://i.pinimg.com/originals/9e/53/a9/9e53a92ee711d979b9bdbb6212115fe0.jpg',
-'https://i.pinimg.com/originals/c6/16/d9/c616d9a871ed3cd9fb6a46efb7f92d95.jpg',
-'https://i.pinimg.com/originals/ac/f0/29/acf029047efffe57999fa876554cbf1d.jpg',
-'https://i.pinimg.com/originals/ae/86/3b/ae863b64ca579f05008dbf027b04988f.jpg',
-'https://i.pinimg.com/originals/d5/65/43/d56543a959da518e08012b4db93747bb.jpg',
-'https://i.pinimg.com/originals/ed/3c/e2/ed3ce276ca71e5bfec1cf2fbfc5561e1.jpg',
-'https://i.pinimg.com/originals/66/30/37/663037f00539f3bc1dbd3efeae0d700b.jpg',
-'https://i.pinimg.com/originals/63/6b/7b/636b7bd0e1df03f0bf72c494cedd6f07.png',
-'https://i.pinimg.com/originals/db/a4/13/dba413518c0a470a5e81cafa431281da.jpg',
-'https://i.pinimg.com/originals/3b/d9/aa/3bd9aa880d23dc3262e119ca09345e99.jpg',
-'https://i.pinimg.com/originals/ef/90/4e/ef904eda01a996e5a9d557a55db6da0f.png',
-'https://i.pinimg.com/originals/fb/f7/a9/fbf7a92af75577e33a564ce490154c8f.jpg',
-'https://i.pinimg.com/originals/16/92/89/1692897136ac3688ab9ccdbb0e54fb21.jpg',
-'https://i.pinimg.com/originals/fc/51/4e/fc514e2f4c23eb96721611b483edc28c.jpg',
-'https://i.pinimg.com/originals/bb/a4/98/bba49848bc4369333f4128b62fc64258.jpg',
-'https://i.pinimg.com/originals/67/a7/54/67a754077a1ffc75c25b3c7bb04d2258.png',
-'https://i.pinimg.com/originals/57/d9/20/57d920d58533915850b431bd0b8e1f1d.jpg',
-'https://i.pinimg.com/originals/83/e5/71/83e5710c42b9e8b9e1a4b6381c4535fe.jpg',
-'https://i.pinimg.com/originals/88/46/88/884688def830c43648f88154836a8b05.jpg',
-'https://i.pinimg.com/originals/32/2c/a4/322ca456fa2cdec4b717895a65adfa8d.jpg',
-'https://i.pinimg.com/originals/42/88/f1/4288f17ee25b909430fb7e707d961d0b.jpg',
-'https://i.pinimg.com/originals/16/14/9c/16149c94a7c0f753230b1edbd03ab3e6.jpg',
-'https://i.pinimg.com/originals/7f/f5/46/7ff546b38e2969e578e697c44944b74f.jpg',
-'https://i.pinimg.com/originals/6d/bc/61/6dbc616311268a25b0ee0e1bd4de13b6.jpg',
-'https://i.pinimg.com/originals/60/34/18/603418ea5c35839914a1071e134add8b.jpg',
-'https://i.pinimg.com/originals/5f/79/71/5f79713647b3e99a787ee7483715c1eb.jpg',
-'https://i.pinimg.com/originals/ed/ea/37/edea37b6f876bfc8f59bbae4d43e26d7.jpg',
-'https://i.pinimg.com/originals/94/38/6d/94386d3c23f509dbc30341fed0363a07.jpg',
-'https://i.pinimg.com/originals/f6/20/b4/f620b4b1c2aaf096455952465db8a980.jpg',
-'https://i.pinimg.com/originals/97/50/73/9750731b4b004da61d44fe01dbe93d85.jpg',
-'https://i.pinimg.com/originals/a0/55/41/a055419e96bc61a5990c575af10ba99e.png',
-'https://i.pinimg.com/originals/aa/6b/df/aa6bdf98cbc9e1fc741c36682fa3e838.jpg',
-'https://i.pinimg.com/originals/c2/4f/75/c24f7518e17faba4bf8908a39be604a6.jpg',
-'https://i.pinimg.com/originals/95/bb/2e/95bb2e7c8b71754003d063f39feb232a.jpg',
-'https://i.pinimg.com/originals/c4/e4/1d/c4e41d096e7585a7e6245e852ece25c2.jpg',
-'https://i.pinimg.com/originals/87/cf/bc/87cfbc189e773ed9294bccfd50a4fbc7.jpg',
-'https://i.pinimg.com/originals/7a/3b/e6/7a3be6cf1595fe6764b5b18b46ca576d.jpg',
-'https://i.pinimg.com/originals/c5/42/f8/c542f83b992e51c6d2519f07489b1dec.jpg',
-'https://i.pinimg.com/originals/96/29/1e/96291e9abbf311b8fc6c8c3f9f8ae059.jpg',
-'https://i.pinimg.com/originals/e5/1a/8d/e51a8d35d2b717fa757fa2abf053a2c7.jpg',
-'https://i.pinimg.com/originals/47/18/af/4718afcd517c8e7e07cc9dba48b3b770.jpg',
-'https://i.pinimg.com/originals/39/2c/cb/392ccb1793c5a23783869994b1ec24b7.jpg',
-'https://i.pinimg.com/originals/0f/98/5f/0f985ffbfff2650d6e3ecf8ba0eb574e.jpg',
-'https://i.pinimg.com/originals/ab/f9/50/abf950c9aa1c4710437d9acc83078f87.jpg',
-'https://i.pinimg.com/originals/f2/dd/cc/f2ddccd5a1b89d2302cf75c6520c58dd.png',
-'https://i.pinimg.com/originals/f1/f7/fc/f1f7fca39eba7d64e50749da5406247c.jpg',
-'https://i.pinimg.com/originals/71/18/96/711896c067c28814ec9ec9c25d4a3ba9.jpg',
-'https://i.pinimg.com/originals/67/a7/54/67a754077a1ffc75c25b3c7bb04d2258.png',
-'https://i.pinimg.com/originals/8f/fe/d4/8ffed485ed8b6db07067e452f8399fff.jpg',
-'https://i.pinimg.com/originals/db/b6/46/dbb6463c9134591aa79369f325877e03.jpg',
-'https://i.pinimg.com/originals/9f/23/1a/9f231a6acc906f95ff3f917211b9abda.png',
-'https://i.pinimg.com/originals/b9/a9/66/b9a9669f0fbbe75e780adad301601b43.jpg',
-'https://i.pinimg.com/originals/86/ed/26/86ed265f2dbb22a48bbc612f59303508.png',
-'https://i.pinimg.com/originals/da/ae/25/daae25409adec418a9b6f6c5dcdecd47.jpg',
-'https://i.pinimg.com/originals/a4/6d/fa/a46dfad749d0577366e9ea2db6cc305e.jpg',
-'https://i.pinimg.com/originals/09/5b/4d/095b4d0ce48f40eca7ad23e43e85ab9a.jpg',
-'https://i.pinimg.com/originals/d9/e1/30/d9e1307a5fbbeb2a267562eab8abc063.jpg',
-'https://i.pinimg.com/originals/db/cf/dc/dbcfdc263095906eabf7e06099ebaef0.png',
-'https://i.pinimg.com/originals/89/14/0d/89140d3ef976904013f672fea0157b7e.png',
-'https://i.pinimg.com/originals/cf/4f/cf/cf4fcf2036f0b5b974f146f2c0ba81db.jpg',
-'https://i.pinimg.com/originals/93/62/9e/93629ee9ab27043076bce2b1f22f9193.jpg',
-'https://i.pinimg.com/originals/99/6b/c4/996bc4049d632bdbf7d9bc24dc8081f0.png',
-'https://i.pinimg.com/originals/f2/6d/35/f26d354b1421546ae993c83f5c7bcfb0.jpg',
-'https://i.pinimg.com/originals/25/5d/d9/255dd9dde5f44673092a4f15e917759f.jpg',
-'https://i.pinimg.com/originals/08/8f/1d/088f1dc58092b60652e05cc941ee0fbd.jpg',
-'https://i.pinimg.com/originals/14/17/dd/1417dd63009eea0b63252076f3b405e6.jpg',
-'https://i.pinimg.com/originals/35/04/d5/3504d53c5850b3bddaa6e0e0714ccacb.jpg',
-'https://i.pinimg.com/originals/88/46/88/884688def830c43648f88154836a8b05.jpg',
-'https://i.pinimg.com/originals/57/d9/20/57d920d58533915850b431bd0b8e1f1d.jpg',
-'https://i.pinimg.com/originals/44/39/17/443917c07ffd65caa7d7cd4065fb8571.jpg',
-'https://i.pinimg.com/originals/bc/9b/81/bc9b81c63b4844fd1a434d462bdfbd80.png',
-'https://i.pinimg.com/originals/4a/e2/74/4ae274c828a2c719bcf9f644106d26cf.jpg',
-'https://i.pinimg.com/originals/d0/cb/da/d0cbdaa334fa92f8b09d1c4d1ddc9cd2.jpg',
-'https://i.pinimg.com/originals/71/16/31/711631ac52f7809f530e40f230b371a4.jpg',
-'https://i.pinimg.com/originals/af/f1/1b/aff11bcfdf946a7bba1687c80515f902.jpg',
-'https://i.pinimg.com/originals/46/79/25/467925d52634fd098ab6890a23c33f30.jpg',
-'https://i.pinimg.com/originals/ef/90/4e/ef904eda01a996e5a9d557a55db6da0f.png',
-'https://i.pinimg.com/originals/a2/e7/73/a2e773fdb7ce0fc99eb123d8a81764ec.jpg',
-'https://i.pinimg.com/originals/79/92/ed/7992ed0c9b272654938ea186cc2e3f4a.jpg',
-'https://i.pinimg.com/originals/7a/08/c8/7a08c8c22066a142f22928662d9d70aa.jpg',
-'https://i.pinimg.com/originals/20/b0/96/20b0962b8c62584fbcd6e7675b4782a4.jpg',
-'https://i.pinimg.com/originals/51/0f/8c/510f8cb8f28b8666d560f89e2006d4b1.jpg',
-'https://i.pinimg.com/originals/c2/4f/75/c24f7518e17faba4bf8908a39be604a6.jpg',
-'https://i.pinimg.com/originals/4e/43/7b/4e437b1bbdee605d833155a97d35bef1.png',
-'https://i.pinimg.com/originals/d5/a2/c9/d5a2c9cdfac835518e45b13cfc39819d.jpg',
-'https://i.pinimg.com/originals/95/bb/2e/95bb2e7c8b71754003d063f39feb232a.jpg',
-'https://i.pinimg.com/originals/16/92/89/1692897136ac3688ab9ccdbb0e54fb21.jpg',
-'https://i.pinimg.com/originals/6f/9a/86/6f9a86eb31e7c5bc34cf0d1d130574e0.png',
-'https://i.pinimg.com/originals/f0/67/f0/f067f00a885fab47d76d4e5423d54c35.jpg',
-'https://i.pinimg.com/originals/4e/9a/7a/4e9a7a196cea58427163313b7db6363e.jpg',
-'https://i.pinimg.com/originals/53/4c/6a/534c6a2e65fdb4c52824f94acc5e2195.jpg',
-'https://i.pinimg.com/originals/8d/04/9a/8d049a1e6951491b24ea4c364f2459bc.jpg',
-'https://i.pinimg.com/originals/22/dc/94/22dc941e60b0ace15d796a94f07d8ba7.jpg',
-'https://i.pinimg.com/originals/80/bc/96/80bc968b4dcd939b60ffe2c8b0c54d75.png',
-'https://i.pinimg.com/originals/ed/34/f8/ed34f88af161e6278993e1598c29a621.jpg',
-'https://i.pinimg.com/originals/9b/36/24/9b36241f4a3b782c05eadb0805ef0dda.png',
-'https://i.pinimg.com/originals/22/8b/ca/228bca60a07d72cac953a9c3be542bab.jpg',
-'https://i.pinimg.com/originals/57/0e/9b/570e9b1288f1189a22b39c8e24ec957f.jpg',
-'https://i.pinimg.com/originals/68/af/17/68af1781a9120a59629d0f774555185f.jpg',
-'https://i.pinimg.com/originals/42/88/f1/4288f17ee25b909430fb7e707d961d0b.jpg',
-'https://i.pinimg.com/originals/c8/0e/ee/c80eeea7a37d732d5a1b0e60464f9e18.jpg',
-'https://i.pinimg.com/originals/1d/08/cb/1d08cbb9d42812984bed54e8291edaec.jpg',
-'https://i.pinimg.com/originals/4e/37/02/4e37020a3e69f16cd04b246c2937b979.jpg',
-'https://i.pinimg.com/originals/59/8e/bf/598ebf206f5ec366e2e32e8c6e8cffb4.jpg',
-'https://i.pinimg.com/originals/cb/ef/94/cbef94975cfed070027c2175a730155d.jpg',
-'https://i.pinimg.com/originals/e0/74/f8/e074f8dc647066a9f112533c789c0e42.png',
-'https://i.pinimg.com/originals/60/ac/9e/60ac9edf63fcb43e3f00555cb71ae6f2.jpg',
-'https://i.pinimg.com/originals/17/16/76/1716760d93dcbf7664380fd81f3133f5.jpg',
-'https://i.pinimg.com/originals/a3/70/e1/a370e1f592136a385ac6cb15918d25f1.jpg',
-'https://i.pinimg.com/originals/89/ee/ab/89eeabd90e54b2951459f81f51e2c791.jpg',
-'https://i.pinimg.com/originals/77/0d/23/770d235d3f6dcd021bda5efdf53cca36.png',
-'https://i.pinimg.com/originals/67/a7/54/67a754077a1ffc75c25b3c7bb04d2258.png',
-'https://i.pinimg.com/originals/c3/1e/58/c31e58fae7f58af4d643c5a2facd49d7.jpg',
-'https://i.pinimg.com/originals/0f/98/5f/0f985ffbfff2650d6e3ecf8ba0eb574e.jpg',
-'https://i.pinimg.com/originals/93/0a/5f/930a5fc6f8f6e64e87ac2cc30b8430ac.jpg',
-'https://i.pinimg.com/originals/1e/14/22/1e14229be49534cbf3d43b71b1738b80.jpg',
-'https://i.pinimg.com/originals/35/04/d5/3504d53c5850b3bddaa6e0e0714ccacb.jpg',
-'https://i.pinimg.com/originals/57/d9/20/57d920d58533915850b431bd0b8e1f1d.jpg',
-'https://i.pinimg.com/originals/c2/4f/75/c24f7518e17faba4bf8908a39be604a6.jpg',
-'https://i.pinimg.com/originals/7f/f5/46/7ff546b38e2969e578e697c44944b74f.jpg',
-'https://i.pinimg.com/originals/bc/9b/81/bc9b81c63b4844fd1a434d462bdfbd80.png',
-'https://i.pinimg.com/originals/d5/a2/c9/d5a2c9cdfac835518e45b13cfc39819d.jpg',
-'https://i.pinimg.com/originals/d7/02/54/d7025401aec66a4baf0fbcbc1054b499.jpg',
-'https://i.pinimg.com/originals/95/bb/2e/95bb2e7c8b71754003d063f39feb232a.jpg',
-'https://i.pinimg.com/originals/ee/ee/fd/eeeefda1774a2d5dced265c1a2d398d5.jpg',
-'https://i.pinimg.com/originals/c3/1e/58/c31e58fae7f58af4d643c5a2facd49d7.jpg',
-'https://i.pinimg.com/originals/1f/9c/1d/1f9c1d5f4d2de0b74e81f190ab4f1792.jpg',
-'https://i.pinimg.com/originals/7a/3b/e6/7a3be6cf1595fe6764b5b18b46ca576d.jpg',
-'https://i.pinimg.com/originals/51/08/53/5108536a4826d3354ac3fe9c3c867cb1.png',
-'https://i.pinimg.com/originals/77/cc/bc/77ccbcd52758458669ed5eadf4437111.jpg',
-'https://i.pinimg.com/originals/51/0f/8c/510f8cb8f28b8666d560f89e2006d4b1.jpg',
-'https://i.pinimg.com/originals/6f/9a/86/6f9a86eb31e7c5bc34cf0d1d130574e0.png',
-'https://i.pinimg.com/originals/79/92/ed/7992ed0c9b272654938ea186cc2e3f4a.jpg',
-'https://i.pinimg.com/originals/39/2c/cb/392ccb1793c5a23783869994b1ec24b7.jpg',
-'https://i.pinimg.com/originals/3b/2c/02/3b2c020665f835b0dfdd74b8cc9ca22d.jpg',
-'https://i.pinimg.com/originals/ee/cf/7c/eecf7cc7f65e5d503399cc88f0e6ef6c.jpg',
-'https://i.pinimg.com/originals/4e/9a/7a/4e9a7a196cea58427163313b7db6363e.jpg',
-'https://i.pinimg.com/originals/8b/f8/46/8bf8468935d529c6383771097381196a.jpg',
-'https://i.pinimg.com/originals/f3/5d/ce/f35dce5f6742bd4f30033fe7b51335cc.jpg',
-'https://i.pinimg.com/originals/94/a6/69/94a6692d5bd9ba0bbd80ba1e4122b2f9.jpg',
-'https://i.pinimg.com/originals/8f/55/04/8f55043dfd9d244f172077bdc0304c6a.png',
-'https://i.pinimg.com/originals/89/ee/ab/89eeabd90e54b2951459f81f51e2c791.jpg',
-'https://i.pinimg.com/originals/83/5a/2e/835a2e582d1f803f03ab3a3c3e58b694.jpg',
-'https://i.pinimg.com/originals/25/5d/d9/255dd9dde5f44673092a4f15e917759f.jpg',
-'https://i.pinimg.com/originals/e2/f1/0e/e2f10ead12c9a2d7c0bb29442604f43d.jpg',
-'https://i.pinimg.com/originals/f5/2a/09/f52a09910f1cad9b5b01d79a620870dc.jpg',
-'https://i.pinimg.com/originals/d9/e1/30/d9e1307a5fbbeb2a267562eab8abc063.jpg',
-'https://i.pinimg.com/originals/6a/4d/11/6a4d11cb5bab1466cf1ccb8c6c4f9eb6.jpg',
-'https://i.pinimg.com/originals/f3/b7/37/f3b7376c2a574b8619c197bce72d1f63.png',
-'https://i.pinimg.com/originals/93/0a/5f/930a5fc6f8f6e64e87ac2cc30b8430ac.jpg',
-'https://i.pinimg.com/originals/30/78/75/307875a9132c6e704eec94bc31fd4f71.jpg',
-'https://i.pinimg.com/originals/12/fa/7d/12fa7df7ba74ac00d846d8d490f7c8a4.jpg',
-'https://i.pinimg.com/originals/68/f6/f3/68f6f37335624f89cda17ab928f51138.jpg',
-'https://i.pinimg.com/originals/de/f6/e7/def6e7ce26ad6a1096e8b1ef395a1904.jpg',
-'https://i.pinimg.com/originals/cc/17/be/cc17be94cd520baa4722e0ca2329c2e9.jpg',
-'https://i.pinimg.com/originals/b3/c5/d1/b3c5d1076a9a48c075c8a92987b03bf3.jpg',
-'https://i.pinimg.com/originals/2c/e6/02/2ce6025d9d1736cf3e67db1fd2bdaf35.jpg',
-'https://i.pinimg.com/originals/31/07/53/310753699042b254fdfa0472a2675158.jpg',
-'https://i.pinimg.com/originals/6b/87/9c/6b879cc29b5df23941dab4f4aafabcbd.jpg',
-'https://i.pinimg.com/originals/52/90/0b/52900bab0f969d9d68207f6ad8510882.jpg',
-'https://i.pinimg.com/originals/25/7e/db/257edb1b91a127bcf91cc2ea6b29edaf.jpg',
-'https://i.pinimg.com/originals/63/6b/7b/636b7bd0e1df03f0bf72c494cedd6f07.png',
-'https://i.pinimg.com/originals/8d/ad/58/8dad58f3b258b3d7f2e913cb4561d99f.jpg',
-'https://i.pinimg.com/originals/8d/04/9a/8d049a1e6951491b24ea4c364f2459bc.jpg',
-'https://i.pinimg.com/originals/fd/21/41/fd21419275236bb153de3c8dcbbf3bf9.jpg',
-'https://i.pinimg.com/originals/80/4f/1a/804f1a05f9996c96a2d492b4854b7fd5.jpg'
+   'https://i.ibb.co/DzvjMqb/anjim9.jpg', 
+   'https://i.ibb.co/QjgP263/anjim6.jpg',
+   'https://i.ibb.co/tH4Twmh/anjim.jpg', 
+   'https://i.ibb.co/18GXb97/anjim0.jpg', 
+   'https://i.ibb.co/G9j5SK0/anjim10.jpg',
+   'https://i.ibb.co/gyjtYpG/anjim11.jpg',
+   'https://i.ibb.co/MgSsGHX/anjim12.jpg', 
+   'https://i.ibb.co/mRxbbdJ/anjim13.jpg',
+   'https://i.ibb.co/7tqLMvk/anjim14.jpg', 
+   'https://i.ibb.co/j5sRRRJ/anjim15.jpg', 
+   'https://i.ibb.co/LPWx0QR/anjim16.jpg',  
+   'https://i.ibb.co/GR9sNtY/anjim18.jpg',  
+   'https://i.ibb.co/YQ8Jypb/anjim19.jpg', 
+   'https://i.ibb.co/jW9nZ2J/anjim2.jpg', 
+   'https://i.ibb.co/DwKrCyd/anjim20.jpg', 
+   'https://i.ibb.co/9hb6xSF/anjim21.jpg', 
+   'https://i.ibb.co/82ftvZW/anjim22.jpg', 
+   'https://i.ibb.co/0VMWxnK/anjim23.jpg', 
+   'https://i.ibb.co/fFP4scP/anjim24.jpg', 
+   'https://i.ibb.co/NxH9HR0/anjim25.jpg',
+   'https://i.ibb.co/hgj7R45/anjim26.jpg', 
+   'https://i.ibb.co/KGWQspH/anjim27.jpg', 
+   'https://i.ibb.co/K9zYXJT/anjim28.jpg', 
+   'https://i.ibb.co/Y7pLnVK/anjim29.jpg',
+   'https://i.ibb.co/P9XgfKX/anjim3.jpg', 
+   'https://i.ibb.co/PQMy6c6/anjim30.jpg',    
+   'https://i.ibb.co/G0V0jCX/anjim31.jpg',  
+   'https://i.ibb.co/BBB7XND/anjim32.jpg',   
+   'https://i.ibb.co/GC5gycZ/anjim4.jpg',   
+   'https://i.ibb.co/yYt3Ty0/anjim5.jpg',  
+   'https://i.ibb.co/9ZX08Cg/anjim7.jpg', 
+   'https://i.ibb.co/89B4MMd/anjim8.jpg'
 ]
