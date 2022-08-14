@@ -27,15 +27,15 @@ const defaultMenu = {
 ┆⬡ *Bailyes Version* : 4.2.0
 ┆⬡ *Database* : %rtotalreg dari %totalreg
 ┆⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-┆⬡ *Yt* :
-┆⬡ https://youtu.be/XYIdel2-bR8
+┆⬡ *Group* :
+┆⬡ https://bit.ly/3duUQvp
 ┗─────────────────⬣
 %readmore`.trim(),
   header: '┏━┈┈『 %category 』┈┈⬣',
   body: '┆⬡ %cmd %islimit %isPremium',
   footer: '┗━───────⬣\n',
   after: `
-*𝐀𝐫𝐢𝐞𝐓𝐮𝐛𝐞@^%version*
+*YoNdakTau-Md@^%version*
 ${'```%npmdesc```'}
 `,
 }
@@ -69,6 +69,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot(proses)',
     'info': 'Info',
+    'owner': 'Owner',
     '': 'Tanpa Kategori',
   }
   if (teks == 'game') tags = {
@@ -201,31 +202,31 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: '𝐥𝐢𝐬𝐭 𝐦𝐞𝐧𝐮 𝐀𝐫𝐢𝐞𝐓𝐮𝐛𝐞 𝐛𝐨𝐭',
+        title: 'PILIH SALAH SATU',
         rows: [
-          { title: 'A҈L҈L҈ M҈E҈N҈U҈ 📋', rowId: `${_p}? all` },
-          { title: 'G҈A҈M҈E҈ 🎮', rowId: `${_p}? game` },
-          { title: 'X҈P 📈҈ ', rowId: `${_p}? xp` },
-          { title: 'S҈T҈I҈K҈E҈R 🐲҈', rowId: `${_p}? stiker` },
-          { title: 'K҈E҈R҈A҈N҈G҈ A҈J҈A҈I҈B 🐚҈', rowId: `${_p}? kerangajaib` },
-          { title: 'Q҈U҈O҈T҈E҈S҈ 🗣️', rowId: `${_p}? quotes` },
-          { title: 'G҈R҈U҈P҈ M҈E҈N҈U 👥҈', rowId: `${_p}? grup` },
-          { title: 'P҈R҈E҈M҈I҈U҈M҈ M҈E҈N҈U҈ 🥨', rowId: `${_p}? premium` },
-          { title: 'B҈E҈B҈A҈N҈ O҈R҈T҈U҈ M҈E҈N҈U҈ 🏋️', rowId: `${_p}? bebanortu` },
-          { title: 'I҈N҈T҈E҈R҈N҈E҈T 🛣️҈', rowId: `${_p}? internet` },
-          { title: 'A҈N҈O҈N҈Y҈M҈O҈U҈S 🎭҈', rowId: `${_p}? anonymous` },
-          { title: 'L҈O҈G҈O҈ & N҈U҈L҈I҈S҈ M҈E҈N҈U ☯️҈', rowId: `${_p}? nulis` },
-          { title: 'D҈O҈W҈N҈L҈O҈A҈D҈E҈R 🌍҈', rowId: `${_p}? downloader` },
-          { title: 'T҈O҈O҈L҈S 🛠️҈', rowId: `${_p}? tools` },
-          { title: 'F҈U҈N҈ M҈E҈N҈U҈ 🎰', rowId: `${_p}? fun`},
-          { title: 'D҈A҈T҈A҈B҈A҈S҈E 📂҈', rowId: `${_p}? database` },
-          { title: 'V҈O҈T҈E҈ & A҈B҈S҈D҈N 🗣️҈', rowId: `${_p}? vote` },
-          { title: 'A҈L҈-Q҈U҈R҈\'A҈N ҈ 📖', rowId: `${_p}? quran` },
-          { title: 'P҈E҈N҈G҈U҈B҈A҈H҈ S҈U҈A҈R҈A҈ 🔊', rowId: `${_p}? audio` },
-          { title: 'J҈A҈D҈I҈B҈O҈T҈(perbaikan)', rowId: `${_p}? jadibot` },
-          { title: 'I҈N҈F҈O҈ 🏢', rowId: `${_p}? info` },
-          { title: 'L҈A҈I҈N҈ L҈A҈I҈N 🛴҈', rowId: `${_p}? tanpakategori` },
-          { title: 'O҈W҈N҈E҈R ⛄҈', rowId: `${_p}? owner` },
+          { title: 'ALL MENU 📋', rowId: `${_p}? all` },
+          { title: 'GAME 🎮', rowId: `${_p}? game` },
+          { title: 'EXP & LIMIT 📈', rowId: `${_p}? xp` },
+          { title: 'STIKER 🐲', rowId: `${_p}? stiker` },
+          { title: 'KERANG AJAIB 🐚', rowId: `${_p}? kerangajaib` },
+          { title: 'QUOTES 🗣️', rowId: `${_p}? quotes` },
+          { title: 'GROUP MENU 👥', rowId: `${_p}? grup` },
+          { title: 'PREMIUM MENU 🥨', rowId: `${_p}? premium` },
+          { title: BEBAN ORTU MENU 🏋️', rowId: `${_p}? bebanortu` },
+          { title: 'INTERNET 🛣️', rowId: `${_p}? internet` },
+          { title: 'ANONYMOUS 🎭', rowId: `${_p}? anonymous` },
+          { title: 'LOGO & NULIS MENU ☯️', rowId: `${_p}? nulis` },
+          { title: 'DOWNLOADER 🌍', rowId: `${_p}? downloader` },
+          { title: 'TOOLS 🛠️', rowId: `${_p}? tools` },
+          { title: 'FUN MENU 🎰', rowId: `${_p}? fun`},
+          { title: 'DATABASE 📂', rowId: `${_p}? database` },
+          { title: 'VOTE & ABSEN 🗣️', rowId: `${_p}? vote` },
+          { title: 'AL-QUR'AN 📖', rowId: `${_p}? quran` },
+          { title: 'PENGUBAH SUARA 🔊', rowId: `${_p}? audio` },
+          { title: 'JAIBOT 🤖', rowId: `${_p}? jadibot` },
+          { title: 'INFO 🏢', rowId: `${_p}? info` },
+          { title: 'TANPA KATEGORI 🛴', rowId: `${_p}? tanpakategori` },
+          { title: 'OWNER ⛄', rowId: `${_p}? owner` },
         ]
       }
     ]
