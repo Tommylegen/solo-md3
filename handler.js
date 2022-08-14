@@ -34,7 +34,7 @@ module.exports = {
         global.wm2 = global.data.namabot + ' ' + global.data.owner
         global.wm = 'Raja Dev'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'Ciss 📸'
+        global.colong2 = 'RajaDev'
         global.kontak2 = [
         ['6289505054287', 'Raja Dev', 'Pelajar', 'Gak donasi Gak papa asal bantu follow tiktok @tommylegends2', true],
         ['6289505054287', await this.getName('6289505054287@s.whatsapp.net'), 'Ga tau', true], 
